@@ -58,7 +58,7 @@ print(auto_model.summary())
 ### **6. Train ARIMA Model & Forecast**
 ```python
 from statsmodels.tsa.arima.model import ARIMA
-model = ARIMA(df['Passengers'], order=(2,1,2))  # Replace with optimal (p,d,q)
+model = ARIMA(df['Passengers'], order=(4,1,3))  # Replace with optimal (p,d,q)
 model_fit = model.fit()
 forecast = model_fit.forecast(steps=12)
 ```
